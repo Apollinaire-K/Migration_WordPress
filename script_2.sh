@@ -1,18 +1,12 @@
 #!/bin/bash
 
-echo "I_Love_Blondie" | sudo -S rm -r /srv/www/
+echo "[Password]" | sudo -S rm -r /srv/www/ # Delte you're old WordPress files, Note that you will need to replace /srv/wwww/ by your actual path to thoses files
 
-echo "Starting Unzipping file .zip"
-echo "I_Love_Blondie" | sudo -S unzip -o /home/mmivroz/Documents/wordpress_push.zip -d /srv/www/
-echo "Finisehd Unzipping .zip File"
+echo "[Password]" | sudo -S unzip -o [path]/wordpress_push.zip -d /srv/www/ # Extract your file into your wordpress folder ( Note that you also need to replace /srv/wwww/ by your actual path to the place you want to put wordpress)
 
-echo "Starting Importing new DataBases"
-mysql -u wordpress wordpress < /home/mmivroz/Documents/wordpress.sql
-echo "Finished Importing DataBases"
+mysql -u wordpress wordpress < [path]/wordpress.sql # Reimporting the new database by mysql
 
-echo "Deleting Useless Files"
 rm /home/mmivroz/Documents/wordpress_push.zip
-rm /home/mmivroz/Documents/wordpress.sql
-echo "Deleted all Useless Files"
+rm /home/mmivroz/Documents/wordpress.sql # Delete the .zip and the dumbed database
 
-echo "I_Love_Blondie" | sudo -S chown -R www-data /srv/www/srv/www/
+echo "[password]" | sudo -S chown -R www-data /srv/www/srv/www/ # Change the owner of the file for it to be www.data (note you need to change /srv/www/srv/www by your own path)
