@@ -54,6 +54,6 @@ Now after you get you're new key (or if you are still using an old one) you are 
 As you change [user] by the username that the permision on the other computer and also change [IP] to the good IP of your other server.
 Once that is done you good to go and you try if everything work by just doing the next command as an exemple :
 <pre>
-  $ssh usertest@10.10.231.111 echo "Hello Word"
+  $ssh usertest@10.10.231.111 ($ echo "Hello Word")
 </pre>
 And after that if everything work you are ready to migrate your Wordpress to an other server.
